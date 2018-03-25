@@ -1,7 +1,5 @@
 package com.doft.common.constant;
 
-import com.doft.common.exception.BusinessException;
-
 /**
  * Created by Jack at 15:18 2018/3/14
  * version 1.0
@@ -33,15 +31,4 @@ public enum EnumUserType {
         return cnDesc;
     }
 
-    public static EnumUserType ofCode(Integer type) {
-        if (type == null) {
-            throw new BusinessException("该用户类型不存在！");
-        }
-        for (EnumUserType userType : values()) {
-            if (type == userType.getCode()) {
-                return userType;
-            }
-        }
-        throw new BusinessException("该用户类型不存在！");
-    }
 }

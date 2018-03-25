@@ -1,6 +1,5 @@
 package com.doft.common.constant;
 
-import com.doft.common.exception.BusinessException;
 
 /**
  * Created by Jack at 16:33 2018/3/14
@@ -34,15 +33,5 @@ public enum EnumMsgType {
         return cnDesc;
     }
 
-    public static EnumMsgType ofCode(Integer type) {
-        if (type == null) {
-            throw new BusinessException("该消息类型不存在！");
-        }
-        for (EnumMsgType msgType : values()) {
-            if (type == msgType.getCode()) {
-                return msgType;
-            }
-        }
-        throw new BusinessException("该消息类型不存在！");
-    }
+
 }

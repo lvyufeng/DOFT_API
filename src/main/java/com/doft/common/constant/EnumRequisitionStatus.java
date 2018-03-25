@@ -1,6 +1,5 @@
 package com.doft.common.constant;
 
-import com.doft.common.exception.BusinessException;
 
 /**
  * Created by Jack at 18:49 2018/3/6
@@ -41,18 +40,6 @@ public enum EnumRequisitionStatus {
         return cnDesc;
     }
 
-    public static EnumRequisitionStatus ofCode(Integer status) {
-        if (status == null) {
-            // Exception
-            throw new BusinessException("该申请单状态不存在！");
-        }
-        for (EnumRequisitionStatus requisitionStatus : values()) {
-            if (requisitionStatus.getCode() == status) {
-                return requisitionStatus;
-            }
-        }
-        // Exception
-        throw new BusinessException("该申请单状态不存在！");
-    }
+
 
 }

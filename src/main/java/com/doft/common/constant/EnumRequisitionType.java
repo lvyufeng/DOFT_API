@@ -1,6 +1,5 @@
 package com.doft.common.constant;
 
-import com.doft.common.exception.BusinessException;
 
 /**
  * Created by Jack at 10:08 2018/3/14
@@ -39,17 +38,5 @@ public enum EnumRequisitionType {
         return cnDesc;
     }
 
-    public static EnumRequisitionType ofCode(Integer type) {
-        if (type == null) {
-            // Exception
-            throw new BusinessException("该申请单类型不存在！");
-        }
-        for (EnumRequisitionType requisitionType : values()) {
-            if (requisitionType.getCode() == type) {
-                return requisitionType;
-            }
-        }
-        // Exception
-        throw new BusinessException("该申请单类型不存在！");
-    }
+
 }

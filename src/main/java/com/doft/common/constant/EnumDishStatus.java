@@ -1,6 +1,5 @@
 package com.doft.common.constant;
 
-import com.doft.common.exception.BusinessException;
 
 /**
  * Created by Jack at 15:18 2018/3/16
@@ -41,18 +40,6 @@ public enum  EnumDishStatus {
         return cnDesc;
     }
 
-    public static EnumDishStatus ofCode(Integer status) {
-        if (status == null) {
-            // Exception
-            throw new BusinessException("该菜品状态不存在！");
-        }
-        for (EnumDishStatus dishStatus : values()) {
-            if (dishStatus.getCode() == status) {
-                return dishStatus;
-            }
-        }
-        // Exception
-        throw new BusinessException("该菜品状态不存在！");
-    }
+
 
 }

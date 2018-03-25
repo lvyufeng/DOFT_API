@@ -3,7 +3,6 @@ package com.doft.controller.backend;
 import com.doft.common.Const;
 import com.doft.common.ServerResponse;
 import com.doft.common.constant.EnumUserType;
-import com.doft.common.exception.BusinessException;
 import com.doft.pojo.User;
 import com.doft.service.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,10 +11,6 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpSession;
 
-import java.util.Date;
-
-import static com.doft.common.BaseFunc.getCurrentUser;
-import static com.doft.common.ctrl.CtrlHelper.dealAjaxRequest;
 
 /**
  * @author lvyufeng

@@ -13,20 +13,12 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import com.doft.common.ServerResponse;
-import com.doft.common.exception.BusinessException;
-import com.doft.pojo.User;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import java.util.Iterator;
 import java.util.Map;
-import static com.doft.common.BaseFunc.getCurrentUser;
-import static com.doft.common.ctrl.CtrlHelper.dealAjaxRequest;
-
 
 /**
  * @author lvyufeng

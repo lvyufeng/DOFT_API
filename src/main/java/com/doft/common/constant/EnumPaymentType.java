@@ -1,6 +1,5 @@
 package com.doft.common.constant;
 
-import com.doft.common.exception.BusinessException;
 
 /**
  * Created by Jack at 15:40 2018/3/16
@@ -45,16 +44,5 @@ public enum  EnumPaymentType {
         this.enDesc = enDesc;
     }
 
-    public static EnumPaymentType ofCode(Integer type) {
-        if (type == null) {
-            throw new BusinessException("该支付类型不存在！");
-        }
-        for (EnumPaymentType paymentType : values()) {
-            if (paymentType.getCode() == type) {
-                return paymentType;
-            }
-        }
-        throw new BusinessException("该支付类型不存在！");
-    }
 
 }
